@@ -1,3 +1,4 @@
+import { ARoutingModule } from './../../.history/src/app/home/home-routing-module_20190322013205';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
