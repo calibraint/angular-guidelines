@@ -3,19 +3,32 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { AddDomainPipe } from './pipes';
+import { BrokenImageDirective } from './directives';
 
 @NgModule({
   imports: [
+    // Modules
     CommonModule,
     RouterModule,
     TranslateModule
   ],
-  declarations: [],
+  declarations: [
+    // Pipes
+    AddDomainPipe,
+    // Directives
+    BrokenImageDirective
+  ],
   exports: [
+    // Modules
     CommonModule,
     TranslateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // Pipes
+    AddDomainPipe,
+    // Directives
+    BrokenImageDirective
   ]
 })
 export class SharedModule {

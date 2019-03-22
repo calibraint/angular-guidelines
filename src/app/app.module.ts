@@ -8,6 +8,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { environment } from '@env/environment';
+
 import { CoreModule } from '@app/core';
 
 // AoT requires an exported function for factories
@@ -32,7 +34,9 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
       }
   })
   ],
-  providers: [],
+  providers: [
+    { provide: 'AppEnvironment', useValue: environment }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,12 @@
 <p>
   {{ 'Title' | translate }}
+  {{ '/assets/img' | addDomain}}
   home works!
+</p>
+<p>
+  <img [src]="'/assets/img/profile.jpg' | addDomain: imageBase"/>
+</p>
+
+<p>
+  <img brokenImage [src]="'/assets/img/profile.jpg' | addDomain: imageBase"/>
 </p>

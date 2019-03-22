@@ -1,9 +1,14 @@
+import { Environment } from '@appcore/entities/environment';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment: any = {
-  production: false
+export const environment: Environment = {
+  production: false,
+  systemBase: 'http://localhost:4200',
+  apiBase: 'http://localhost:4200',
+  imageBase: 'http://localhost:4200'
 };
 
 /*
