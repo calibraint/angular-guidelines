@@ -132,7 +132,7 @@
     "no-output-rename": true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
-    "component-class-suffix": [true, "Component", "View", "Modal", "Cards"],
+    "component-class-suffix": [true, "Component", "View", "Dialog", "Cards"],
     "directive-class-suffix": true
   }
 }
