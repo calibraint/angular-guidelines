@@ -7,7 +7,7 @@ import { Environment } from '@appcore/entities/environment';
 export const environment: Environment = {
   production: false,
   systemBase: 'http://localhost:4200',
-  apiBase: 'http://localhost:4200',
+  apiBase: 'http://demo5056382.mockable.io/API/',
   imageBase: 'http://localhost:4200'
 };
 
