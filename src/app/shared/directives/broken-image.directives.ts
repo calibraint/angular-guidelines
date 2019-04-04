@@ -6,6 +6,8 @@ import { NgModel } from '@angular/forms';
   selector: '[brokenImage]',
   providers: [NgModel],
 })
+
+// used like <img brokenImage [src]="'/assets/img/profile.jpg' | addDomain: imageBase"/>
 export class BrokenImageDirective {
   @Input() loaded: boolean;
   @Output() loadedChange: EventEmitter<boolean> = new EventEmitter();

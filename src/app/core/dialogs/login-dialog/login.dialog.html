@@ -16,6 +16,6 @@
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">Login</button>
+  <button mat-button mat-dialog-close (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="onSuccess()">Login</button>
 </mat-dialog-actions>

@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { LoginDialog } from '@appcore/dialogs/login-dialog/login.dialog';
 
 @Component({
   selector: 'app-header',
@@ -12,20 +13,15 @@ export class HeaderComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef: any = this.dialog.open(LoginDialog, {
+    this.dialog.open(LoginDialog, {
       width: '400px',
-    });
-
-    dialogRef.afterClosed().subscribe((result: any) => {
+      maxHeight: '100%',
+      maxWidth: '100%',
+      disableClose: true
+    }).afterClosed().subscribe((result: string) => {
       console.log(`Dialog result: ${result}`);
     });
   }
 
 }
 
-@Component({
-  selector: 'login-dialog',
-  templateUrl: './login-dialog.html',
-})
-export class LoginDialog {
-}
