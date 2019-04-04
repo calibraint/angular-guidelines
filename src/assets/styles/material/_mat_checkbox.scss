@@ -4,7 +4,7 @@
 
 .mat-checkbox-checked, .mat-checkbox-indeterminate {
   &.mat-primary .mat-checkbox-background {
-    background-color: $primary-color;
+    background-color: $blue;
   }
 }
 .mat-checkbox-checked, .mat-checkbox-indeterminate {
@@ -20,7 +20,7 @@
 
 .mat-checkbox {
   &.mat-primary .mat-ripple-element {
-    background-color: rgba($primary-color, .5) !important;
+    background-color: rgba($blue, .5) !important;
   }
 }
 
@@ -35,4 +35,3 @@
     background-color: rgba($warn-color, .5) !important;
   }
 }
-

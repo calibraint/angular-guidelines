@@ -15,9 +15,9 @@
 @import "assets/styles/settings/variables";
 
 /* ==========================================================================
-    Angular Material Theme
+   Calibraint Angular Material Theme
    ========================================================================== */
-@import "assets/styles/material/custom-material";
+   @import "assets/styles/material/CalibraintUI-material";
 
 /* ==========================================================================
    Tools
@@ -25,8 +25,3 @@
    ========================================================================== */
 @import "assets/styles/tools/mixins";
 @import "assets/styles/tools/utilities";
-
-
-.hide {
-  display: none
-}

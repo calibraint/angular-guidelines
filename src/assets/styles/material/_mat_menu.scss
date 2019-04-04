@@ -4,7 +4,7 @@
 
 .mat-menu-panel {
   .mat-menu-item {
-    font-size: $font-size;
+    font-size: 14px;
     height: 40px;
     line-height: 40px;
     text-transform: none;
@@ -13,14 +13,6 @@
     &:hover {
       color: $text-grey-primary;
       background-color: $grey-lighten-3;
-    }
-  }
-  
-  .mat-menu-content {
-    .mat-menu-item {
-      &:focus {
-        outline: none !important;
-      }
     }
   }
 }

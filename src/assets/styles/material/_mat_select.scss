@@ -4,42 +4,23 @@
 /* Mat form field Select box style overwrite here */
 
 mat-form-field.mat-form-field-type-mat-select {
-  position: relative;
   .mat-select {
     border: 1px solid $grey-lighten-2;
     border-radius: $global-border-radius;
-    line-height: 36px;
+    line-height: 34px;
     padding-left: $spacer16;
     padding-right: $spacer8;
     width: 100%;
 
     .mat-select-arrow {
-        border: none !important;
-      &:after {
-        content:"";
-        background: url('/../../assets/images/double-arrow.png') no-repeat;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background-size: contain;
-        top: 10px;
-        right: -4px;
-      }
-      &.active {
-        &:after {
-          content:"";
-          background: url('/../../assets/images/double-arrow-red.png') no-repeat;
-          position: absolute;
-          width: 16px;
-          height: 16px;
-          background-size: contain;
-          top: 10px;
-          right: -4px;
-        }
-      }
-    }
-    .mat-select-value {
-      color: $primary-color;
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      border-left: 0;
+      border-right: -2px;
+      border-top: 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
     }
 
     &.mat-select-invalid {
@@ -47,16 +28,7 @@ mat-form-field.mat-form-field-type-mat-select {
       border: 1px solid $red;
 
       .mat-select-arrow {
-        &:after {
-          content:"";
-          background: url('/../../assets/images/double-arrow-wran.png') no-repeat;
-          position: absolute;
-          width: 16px;
-          height: 16px;
-          background-size: contain;
-          top: 10px;
-          right: -4px;
-        }
+        border-color: $red;
       }
     }
 
@@ -72,26 +44,15 @@ mat-form-field.mat-form-field-type-mat-select {
   // ERROR state when focused
   &:focus, &.mat-focused {
     .mat-select {
-      border: 1px solid $primary-color;
       &.mat-select-invalid {
         background: $text-white-primary;
         border: 2px solid $red;
 
         .mat-select-arrow {
-          &:after {
-            content:"";
-            background: url('/../../assets/images/double-arrow-red.png') no-repeat;
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background-size: contain;
-            top: 10px;
-            right: -4px;
-          }
+          border-color: $red;
         }
       }
     }
-
   }
 
   .mat-select-arrow {
@@ -99,7 +60,7 @@ mat-form-field.mat-form-field-type-mat-select {
   }
 
   .mat-form-field-label {
-    color: $text-grey-content !important;
+    color: $text-grey-primary !important;
   }
 
   &.mat-focused.mat-primary {
@@ -115,19 +76,13 @@ mat-form-field.mat-form-field-type-mat-select {
       background-color: $grey-lighten-3;
 
       .mat-select-arrow {
-        border: none !important;
-        &:after {
-          content:"";
-          background: url('/../../assets/images/double-arrow-red.png') no-repeat;
-          position: absolute;
-          width: 16px;
-          height: 16px;
-          background-size: contain;
-          top: 10px;
-          right: -4px;
-        }
+        border: solid $text-grey-hint;
+        border-width: 0 2px 2px 0;
+        border-left: 0;
+        border-right: -2px;
+        border-top: 0;
+        padding: 3px;
       }
-      
 
       &:hover {
         cursor: not-allowed;

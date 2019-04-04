@@ -13,7 +13,7 @@ import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { TitleService } from '@app/shared/services/title.services';
 
-import { HeaderComponent } from '@app/layout/header/header.component';
+import { HeaderComponent, LoginDialog } from '@app/layout/header/header.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
@@ -23,7 +23,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginDialog
   ],
   imports: [
     BrowserModule,
@@ -38,6 +39,9 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
           deps: [HttpClient]
       }
   })
+  ],
+  entryComponents: [
+    LoginDialog
   ],
   providers: [
     { provide: 'AppEnvironment', useValue: environment }

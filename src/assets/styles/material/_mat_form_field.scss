@@ -5,18 +5,16 @@
 
 mat-form-field.mat-form-field {
   background: $text-white-primary;
-  font-size: $font-size;
+  font-size: 14px;
   margin-bottom: $spacer16;
   position: relative;
-  font-family: 'Source sans pro', sans-serif;
 
   .mat-form-field-label, .mat-focused .mat-form-field-label {
-    color: $text-grey-content !important;
-    font-weight: 400;
+    color: $text-grey-hint !important;
   }
 
   &.mat-form-field-disabled .mat-form-field-label, &.mat-form-field-disabled.mat-focused .mat-form-field-label {
-    color: $text-grey-content !important;
+    color: $text-grey-hint !important;
   }
 
   &.full-width {
@@ -49,8 +47,8 @@ mat-form-field.mat-form-field {
 
   //mat form field placeholder style overwrite here
   .mat-form-field-label {
-    line-height: 36px;
-    padding-left: $spacer12;
+    line-height: 34px;
+    padding-left: $spacer16;
     top: 0.84375em;
 
     .mat-placeholder-required {

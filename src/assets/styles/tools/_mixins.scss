@@ -101,11 +101,6 @@
   font-weight: $weight;
   color: $color;
 }
-@mixin heading($size, $weight, $color) {
-  font-size: $size;
-  font-weight: $weight;
-  color: $color;
-}
 
 /* ==========================================================================
    Mixins

@@ -3,7 +3,7 @@
 /* Material Radio Button style overwrite here */
 
 .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
-  border-color: $primary-color;
+  border-color: $blue;
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
@@ -15,7 +15,7 @@
 }
 
 .mat-radio-button.mat-primary .mat-radio-inner-circle {
-  background-color: $primary-color;
+  background-color: $blue;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
@@ -27,7 +27,7 @@
 }
 
 .mat-radio-button.mat-primary .mat-ripple-element {
-  background-color: rgba($primary-color, .5) !important;
+  background-color: rgba($blue, .5) !important;
 }
 
 .mat-radio-button.mat-accent .mat-ripple-element {
