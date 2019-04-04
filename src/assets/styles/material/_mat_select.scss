@@ -1,0 +1,189 @@
+@import "../settings/colors";
+@import "../settings/variables";
+
+/* Mat form field Select box style overwrite here */
+
+mat-form-field.mat-form-field-type-mat-select {
+  position: relative;
+  .mat-select {
+    border: 1px solid $grey-lighten-2;
+    border-radius: $global-border-radius;
+    line-height: 36px;
+    padding-left: $spacer16;
+    padding-right: $spacer8;
+    width: 100%;
+
+    .mat-select-arrow {
+        border: none !important;
+      &:after {
+        content:"";
+        background: url('/../../assets/images/double-arrow.png') no-repeat;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        top: 10px;
+        right: -4px;
+      }
+      &.active {
+        &:after {
+          content:"";
+          background: url('/../../assets/images/double-arrow-red.png') no-repeat;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          top: 10px;
+          right: -4px;
+        }
+      }
+    }
+    .mat-select-value {
+      color: $primary-color;
+    }
+
+    &.mat-select-invalid {
+      background: $red-lighten2;
+      border: 1px solid $red;
+
+      .mat-select-arrow {
+        &:after {
+          content:"";
+          background: url('/../../assets/images/double-arrow-wran.png') no-repeat;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          top: 10px;
+          right: -4px;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.mat-form-field-invalid .mat-form-field-label {
+    color: $red !important;
+  }
+
+  // ERROR state when focused
+  &:focus, &.mat-focused {
+    .mat-select {
+      border: 1px solid $primary-color;
+      &.mat-select-invalid {
+        background: $text-white-primary;
+        border: 2px solid $red;
+
+        .mat-select-arrow {
+          &:after {
+            content:"";
+            background: url('/../../assets/images/double-arrow-red.png') no-repeat;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            top: 10px;
+            right: -4px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .mat-select-arrow {
+    color: $text-grey-primary;
+  }
+
+  .mat-form-field-label {
+    color: $text-grey-content !important;
+  }
+
+  &.mat-focused.mat-primary {
+    .mat-select-arrow, .mat-form-field-label {
+      color: $text-grey-primary;
+    }
+  }
+
+  // If mat form field is disabled
+  &.mat-form-field-disabled {
+    .mat-select {
+      border-color: transparent;
+      background-color: $grey-lighten-3;
+
+      .mat-select-arrow {
+        border: none !important;
+        &:after {
+          content:"";
+          background: url('/../../assets/images/double-arrow-red.png') no-repeat;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          top: 10px;
+          right: -4px;
+        }
+      }
+      
+
+      &:hover {
+        cursor: not-allowed;
+      }
+
+      //Once select box was Disabled this style to be added into the utilities styles
+      //.mat-select-trigger {
+      //  cursor: not-allowed;
+      //}
+    }
+  }
+
+  &.single-border {
+    .mat-select {
+      border: none;
+      border-bottom: 1px solid $grey-lighten-2;
+      border-radius: 0;
+
+      &.mat-select-invalid {
+        background: $red-lighten2;
+        border: none;
+        border-bottom: 1px solid $red;
+      }
+    }
+
+    // ERROR state when focused
+    &:focus, &.mat-focused {
+      .mat-select {
+        &.mat-select-invalid {
+          background: $text-white-primary;
+          border: none;
+          border-bottom: 2px solid $red;
+        }
+      }
+    }
+  }
+
+  &.transparent-form {
+    .mat-select {
+      border: none;
+      border-radius: 0;
+
+      &.mat-select-invalid {
+        background: $red-lighten2;
+        border: none;
+      }
+    }
+
+    // ERROR state when focused
+    &:focus, &.mat-focused {
+      .mat-select {
+        &.mat-select-invalid {
+          background: $text-white-primary;
+          border: none;
+        }
+      }
+    }
+  }
+}

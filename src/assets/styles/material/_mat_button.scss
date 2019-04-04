@@ -1,0 +1,554 @@
+@import "../settings/colors";
+@import "../settings/variables";
+
+/* Material Button style overwrite here */
+
+button.mat-button,
+a.mat-button {
+	color: $black;
+	transition: all .3s;
+	border-radius: 4px;
+	font-weight: 500;
+	letter-spacing: 0.50px;
+	outline: none;
+	line-height: 30px;
+	font-family: 'Source sans pro', sans-serif;
+	&.full-width {
+		width: 100%;
+	}
+	&.small {
+		min-width: 60px;
+		line-height: 30px;
+		font-size: 12px;
+		i {
+			font-size: $font-size;
+		}
+	}
+	&.large {
+		min-width: 60px;
+		line-height: 44px;
+		font-size: 16px;
+		i {
+			font-size: 18px;
+		}
+	}
+	&:hover {
+		background-color: rgba($black, 0.1);
+		border-radius: $border-radius-rounded;
+	}
+	// Button colors
+	&.mat-primary {
+		color: $primary-color;
+		color: $text-white-primary;
+		border-radius: $border-radius-rounded;
+		padding: $spacer2 $spacer24;
+		&:hover {
+			background-color: rgba($primary-color, 0.1);
+		}
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-secondary {
+			color: $text-grey-content !important;
+			border: 1px solid transparent;
+			border-radius: $border-radius-rounded;
+			padding: $spacer2 $spacer24 $spacer4 14px;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			border: 1px solid $text-grey-content;
+			border-radius: $border-radius-rounded;
+			padding: $spacer2 $spacer24 $spacer4 14px;
+			background: $text-white-primary !important;
+
+		}
+	}
+	&.mat-grey{
+		color: $text-grey-content !important;
+		border: 1px solid transparent;
+		border-radius: $border-radius-rounded;
+		padding: $spacer2 $spacer24;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			border: 1px solid $text-grey-content;
+			border-radius: $border-radius-rounded;
+			padding: $spacer2 $spacer24;
+			background: $text-white-primary !important;
+
+		}
+	}
+	.mat-blue {
+		color: $blue;
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		&:hover {
+			background-color: rgba($primary-color, 0.1);
+		}
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	.mat-dark-green {
+		color: $blue;
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		&:hover {
+			background-color: rgba($primary-color, 0.1);
+		}
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-warn {
+		color: $red;
+		&:hover {
+			background-color: rgba($red, 0.1);
+		}
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-green {
+		color: $green;
+		&:hover {
+			background-color: rgba($green, 0.1);
+		}
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-dark {
+		color: $text-grey-content;
+		&:hover {
+			background-color: rgba($text-grey-content, 0.1);
+		}
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+}
+
+button.mat-flat-button,
+a.mat-flat-button {
+	background-color: $text-white-primary;
+	border: 1px solid transparent !important;
+	color: $black;
+	transition: all .3s;
+	border-radius: 4px;
+	font-weight: 500;
+	letter-spacing: 0.50px;
+	outline: none;
+	border: none;
+	line-height: 30px;
+	font-family: 'Source sans pro', sans-serif;
+	&:disabled {
+		color: rgba($text-grey-secondary, 0.5) !important;
+		cursor: not-allowed;
+	}
+	&.full-width {
+		width: 100%;
+	}
+	&.small {
+		min-width: 60px;
+		line-height: 30px;
+		font-size: 12px;
+		i {
+			font-size: $font-size;
+		}
+	}
+	&.large {
+		min-width: 60px;
+		line-height: 44px;
+		font-size: 16px;
+		i {
+			font-size: 18px;
+		}
+	}
+	&:hover {
+		background-color: rgba($black, 0.1);
+	}
+	// Button colors
+	&.mat-primary {
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		background: $primary-color;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	
+	&.mat-blue {
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		background: $blue;
+			&:disabled {
+				color: $text-white-primary;
+				cursor: not-allowed;
+			}
+	}
+	&.mat-warn {
+		background-color: $red;
+		color: $text-white-primary;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-green {
+		background-color: $green;
+		color: $text-white-primary;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-dark-green {
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		background: $dark-green;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+}
+
+button.mat-raised-button,
+a.mat-raised-button {
+	background-color: $text-white-primary;
+	border: 1px solid transparent !important;
+	color: $black;
+	transition: all .3s;
+	border-radius: 4px;
+	font-weight: 500;
+	letter-spacing: 0.50px;
+	outline: none;
+	border: none;
+	line-height: 30px;
+	font-family: 'Source sans pro', sans-serif;
+	&:disabled {
+		color: rgba($text-grey-secondary, 0.5) !important;
+		cursor: not-allowed;
+	}
+	&.full-width {
+		width: 100%;
+	}
+	&.small {
+		min-width: 60px;
+		line-height: 30px;
+		font-size: 12px;
+		i {
+			font-size: $font-size;
+		}
+	}
+	&.large {
+		min-width: 60px;
+		line-height: 44px;
+		font-size: 16px;
+		i {
+			font-size: 18px;
+		}
+	}
+	&:hover {
+		background-color: rgba($black, 0.1);
+	}
+	// Button colors
+	&.mat-primary {
+		color: $text-white-primary;
+		border-radius: $global-border-radius;
+		padding: 0 $spacer16;
+		background: $primary-color;
+		box-shadow: none !important;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-blue {
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		background: $blue;
+			&:disabled {
+				color: $text-white-primary;
+				cursor: not-allowed;
+			}
+		}
+	&.mat-warn {
+		background-color: $red;
+		color: $text-white-primary;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-green {
+		background-color: $green;
+		color: $text-white-primary;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+	&.mat-dark-green {
+		color: $text-white-primary;
+		border-radius: 25px;
+		padding: $spacer2 $spacer24;
+		background: $dark-green;
+		&:disabled {
+			color: $text-white-primary;
+			cursor: not-allowed;
+		}
+	}
+}
+
+button.mat-stroked-button,
+a.mat-stroked-button {
+	border: 1px solid $text-grey-secondary;
+	background-color: $text-white-primary;
+	color: $text-grey-secondary;
+	transition: all .3s;
+	border-radius: 4px;
+	font-weight: 400;
+	letter-spacing: 0.50px;
+	outline: none;
+	border: none;
+	line-height: 30px;
+	font-family: 'Source sans pro', sans-serif;
+	font-size: $font-size;
+	&.full-width {
+		width: 100%;
+	}
+	&.small {
+		min-width: 60px;
+		line-height: 30px;
+		font-size: 12px;
+		i {
+			font-size: $font-size;
+		}
+	}
+	&.large {
+		min-width: 60px;
+		line-height: 44px;
+		font-size: 16px;
+		i {
+			font-size: 18px;
+		}
+	}
+	&:hover {
+		background-color: rgba($grey-lighten-6, 0.01);
+	}
+	// Button colors
+	&.mat-primary {
+		color: $primary-color;
+		border: 1px solid $primary-color;
+		border-radius: $border-radius-rounded;
+		padding: $spacer2 $spacer24;
+		background: transparent;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			background-color: $primary-color;
+			color: $text-white-primary;
+		}
+	}
+	&.mat-filter {
+		color: $text-grey-content;
+		border: 1px solid $grey-lighten-6;
+		border-radius: $border-radius-rounded;
+		padding: $spacer2 $spacer24;
+		background: transparent;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			background-color: $background-light-blue;
+			color: $text-grey-content;
+		}
+	}
+	&.mat-accent {
+		color: $grey-lighten-2;
+		border: 1px solid $grey-lighten-2;
+		border-radius: 6px;
+		padding: $spacer2 $spacer12;
+		background: $text-white-primary;
+		color: $text-grey-secondary;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			background-color: $primary-color;
+			color: $text-white-primary;
+			border: 1px solid $primary-color;
+			i {
+				color: $text-white-primary !important;
+			}
+		}
+	}
+	&.mat-light-blue {
+		color: $grey-lighten-2;
+		border: 1px solid $grey-lighten-2;
+		border-radius: $border-radius;
+		padding: $spacer2 $spacer16;
+		background: $background-light-blue;
+		color: $text-grey-secondary;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			border: solid 1px $text-grey-hint;
+			background: transparent !important;
+			
+		}
+	}
+	&.mat-review {
+		color: $primary-color !important;
+		border-radius: $global-border-radius;
+		padding: $spacer2 $spacer8;
+		background: rgba($primary-color, 0.05) !important;
+		font-size: 10px;
+		line-height: 18px !important;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			color: $primary-color !important;
+			border-radius: $global-border-radius;
+			padding: $spacer2 $spacer8;
+			background: rgba($primary-color, 0.05) !important;
+			font-size: 10px;
+			line-height: 18px !important;
+				
+		}
+	}
+	&.mat-disabled {
+		color: $text-grey-content !important;
+		border-radius: $global-border-radius;
+		padding: 1px $spacer8;
+		background: transparent !important;
+		font-size: 10px;
+		line-height: 18px !important;
+		border: $border-1;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			color: $text-grey-content !important;
+			border-radius: $global-border-radius;
+			padding: 1px $spacer8;
+			background: transparent !important;
+			font-size: 10px;
+			line-height: 18px !important;	
+			border: $border-1
+			}
+	}
+	&.mat-review-notification {
+		color: $primary-color !important;
+		border-radius: $global-border-radius;
+		padding: 0 $spacer24;
+		background: rgba($primary-color, 0.05) !important;
+		font-weight: 600;
+		font-size: 12px;
+		border: 1px solid transparent;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			color: $primary-color !important;
+			border-radius: $global-border-radius;
+			padding: 0 $spacer24;
+			background: rgba($primary-color, 0.05) !important;
+			border: 1px solid transparent;
+				
+		}
+	}
+	&.mat-disabled-notification {
+		color: $text-grey-content !important;
+		border-radius: $global-border-radius;
+		padding: 0 $spacer24;
+		background: transparent !important;
+		border: $border-1;
+		font-size: 12px;
+		&:disabled {
+			color: rgba(0, 0, 0, 0.26) !important;
+			border: solid 1px rgba(0, 0, 0, 0.12);
+			background: $text-white-primary !important;
+			cursor: not-allowed;
+		}
+		&:hover {
+			color: $text-grey-content !important;
+			border-radius: $global-border-radius;
+			padding: 0 $spacer24;
+			background: transparent !important;
+			border: $border-1
+			}
+	}
+	&.mat-warn {
+		color: $red;
+		border: 1px solid $red;
+		&:disabled {
+			color: $text-white-primary;
+		}
+	}
+	&.mat-green {
+		color: $green;
+		border: 1px solid $green;
+		&:disabled {
+			color: $text-white-primary;
+		}
+	}
+	&.mat-violet {
+		color: $primary-color;
+		border: 1px solid $primary-color;
+		&:hover {
+			color: $text-white-primary;
+			background-color: $primary-color;
+		}
+	}
+}
+
+

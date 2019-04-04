@@ -1,15 +1,22 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { ApiPrefixInterceptor } from './interceptors/api-prefix.interceptor';
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
+import { MaterialModule } from '@app/shared/material.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MaterialModule
   ],
-  declarations: [],
+  declarations: [
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

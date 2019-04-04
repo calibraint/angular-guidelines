@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// Bootstrap
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+/* ==========================================================================
+   Settings
+    - Global variables, config switches, brand colors, etc
+   ========================================================================== */
+@import "assets/styles/settings/colors";
+@import "assets/styles/settings/fonts";
+@import "assets/styles/settings/variables";
+
+/* ==========================================================================
+    Angular Material Theme
+   ========================================================================== */
+@import "assets/styles/material/custom-material";
+
+/* ==========================================================================
+   Tools
+    - Globally-available tools, public mixins, helper functions
+   ========================================================================== */
+@import "assets/styles/tools/mixins";
+@import "assets/styles/tools/utilities";
+
+
 .hide {
   display: none
 }

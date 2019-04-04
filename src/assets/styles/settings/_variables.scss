@@ -1,0 +1,52 @@
+/* ==============================
+   Border Radius Properties
+---------------------------------*/
+
+$border-radius-rounded: 50px;
+$border-radius-circle: 50%;
+
+$global-border-radius: 2px;
+$global-border-radius-1: 3px;
+$border-radius: 5px;
+
+/* ==============================
+   Font Size Properties
+---------------------------------*/
+
+$font-size: 14px;
+
+/* ==============================
+   Box Shadow Properties
+---------------------------------*/
+
+$box-shadow1: 0 2px 15px 0 rgba(155, 155, 155, 0.1);
+$box-shadow2: 0 2px 14px 0 rgba(0, 0, 0, 0.07);
+
+/* ==============================
+   Spacers Properties
+---------------------------------*/
+
+$spacer2: 2px;
+$spacer4: 4px;
+$spacer6: 6px;
+$spacer8: 8px;
+$spacer12: 12px;
+$spacer16: 16px;
+$spacer20: 20px;
+$spacer24: 24px;
+$spacer32: 32px;
+$spacer40: 40px;
+
+/* ==============================
+   Gradient Properties
+---------------------------------*/
+
+$gradient-color-1: linear-gradient(to top right, $primary-color, $secondary-color);
+$gradient-color-2: linear-gradient(to right, $primary-color, $secondary-color);
+$gradient-color-3: linear-gradient(to bottom, $primary-color, $secondary-color);
+
+/* ==============================
+   Divider Properties
+---------------------------------*/
+
+$border-1: 1px solid $grey-lighten-2;

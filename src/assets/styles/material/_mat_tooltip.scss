@@ -1,0 +1,22 @@
+/* Material Tooltip style overwrite here */
+@import "../settings/colors";
+@import "../settings/variables";
+
+.mat-tooltip {
+  font-size: 12px;
+  position: relative;
+
+  &:before {
+    content: "";
+    @include size (14px);
+    background: red;
+    z-index: 111;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    transform: rotate(45deg);
+  }
+}
+.example-tooltip-black {
+  background: $text-grey-primary;
+}

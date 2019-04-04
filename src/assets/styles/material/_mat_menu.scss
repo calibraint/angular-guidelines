@@ -1,0 +1,26 @@
+@import "../settings/colors";
+
+/* Material Menu style overwrite here */
+
+.mat-menu-panel {
+  .mat-menu-item {
+    font-size: $font-size;
+    height: 40px;
+    line-height: 40px;
+    text-transform: none;
+    transition: all .3s;
+
+    &:hover {
+      color: $text-grey-primary;
+      background-color: $grey-lighten-3;
+    }
+  }
+  
+  .mat-menu-content {
+    .mat-menu-item {
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+}

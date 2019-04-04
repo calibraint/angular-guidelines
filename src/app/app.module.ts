@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from '@app/shared/material.module';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -12,6 +13,8 @@ import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { TitleService } from '@app/shared/services/title.services';
 
+import { HeaderComponent } from '@app/layout/header/header.component';
+
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,13 +22,15 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
+    MaterialModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
@@ -35,7 +40,6 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   })
   ],
   providers: [
-    TitleService,
     { provide: 'AppEnvironment', useValue: environment }
   ],
   bootstrap: [AppComponent]
