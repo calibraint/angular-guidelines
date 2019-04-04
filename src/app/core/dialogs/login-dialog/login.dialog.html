@@ -13,9 +13,12 @@
         <input matInput placeholder="Enter an Password">
       </mat-form-field>
     </div>
+    <div class="modal-popup-loader" *ngIf="loading">
+      <mat-spinner [diameter]=40 [strokeWidth]=4></mat-spinner>
+    </div>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close (click)="onCancel()">Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="onSuccess()">Login</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary" (click)="login()">Login</button>
 </mat-dialog-actions>

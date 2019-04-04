@@ -8,9 +8,18 @@ import { MatDialogRef } from '@angular/material';
 })
 export class LoginDialog implements OnInit {
 
+  loading: boolean = false;
   constructor(public dialogRef: MatDialogRef<LoginDialog>) { }
 
   ngOnInit(): void {
+  }
+
+  login(): void {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      this.onSuccess();
+    }, 3000);
   }
 
   onSuccess(): void {
