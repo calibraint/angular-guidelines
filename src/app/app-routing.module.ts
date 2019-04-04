@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: '@app/layout/home/home.module#HomeModule',
+    loadChildren: '@app/layouts/home-layout/home-layout.module#HomeLayoutModule',
   },
 ];
 
