@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateChild } from '@angular/router';
 
 import { AuthenticationService } from '../authentication/authentication.service';
+import { LoginNotRequiredPages } from './login-rule.constants';
+import * as _ from 'lodash';
 
 
 @Injectable({
@@ -9,6 +11,7 @@ import { AuthenticationService } from '../authentication/authentication.service'
 })
 export class AuthGuard implements CanActivate, CanActivateChild {
 
+  loginNotRequiredPages: typeof LoginNotRequiredPages = LoginNotRequiredPages;
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService) { }
@@ -24,11 +27,12 @@ export class AuthGuard implements CanActivate, CanActivateChild {
 
   private chekUser(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const isLogin: boolean = this.authenticationService.isLogin();
-    if (isLogin && state.url === '/home') {
+    if (isLogin && !_.includes(this.loginNotRequiredPages, state.url)) {
       return true;
-    } else if (isLogin && state.url === '/login') {
+    } else if (isLogin && _.includes(this.loginNotRequiredPages, state.url)) {
       this.router.navigate(['/home']);
-    } else if (!isLogin && state.url === '/home') {
+      return true;
+    } else if (!isLogin && !_.includes(this.loginNotRequiredPages, state.url)) {
       this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
     } else {
       return true;
