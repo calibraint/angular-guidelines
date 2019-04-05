@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '@app/core/apis/users.api';
 
 @Component({
   selector: 'app-home-layout',
@@ -8,15 +7,9 @@ import { UserService } from '@app/core/apis/users.api';
 })
 export class HomeLayoutComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe((data: any) => {
-      console.log(data);
-      localStorage.setItem('token', data.token);
-    }, (err: any) => {
-      console.log(err);
-    });
   }
 
 }

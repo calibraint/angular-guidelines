@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeLayoutComponent } from './home-layout.component';
+import { LoginLayoutComponent } from './login-layout.component';
 import { AuthGuard } from '@appcore/guards/auth.guard';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeLayoutComponent,
+    component: LoginLayoutComponent,
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
-    data: { title: 'Home Page' }
+    data: { title: 'Login Page' }
   }
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeLayoutRoutingModule { }
+export class LoginLayoutRoutingModule { }

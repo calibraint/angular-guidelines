@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { LoginDialog } from '@appcore/dialogs/login-dialog/login.dialog';
+import { AuthenticationService } from '@appcore/authentication/authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,11 @@ import { LoginDialog } from '@appcore/dialogs/login-dialog/login.dialog';
 export class HeaderComponent {
   name: string;
 
-  constructor(public dialog: MatDialog) {}
+  @Input() isLoggedIn: boolean = false;
+
+  constructor(public dialog: MatDialog,
+              private authenticationService: AuthenticationService,
+              private router: Router) {}
 
   openDialog(): void {
     this.dialog.open(LoginDialog, {
@@ -20,6 +26,12 @@ export class HeaderComponent {
       disableClose: true
     }).afterClosed().subscribe((result: string) => {
       console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  logout(): void {
+    this.authenticationService.logout().subscribe(() => {
+      this.router.navigate(['/login']);
     });
   }
 

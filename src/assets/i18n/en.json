@@ -1,4 +1,5 @@
 {
   "ANGULAR_GUILDELINES": "Angular Guidelines",
-  "LOGIN": "Login"
+  "LOGIN": "Login",
+  "LOGOUT": "Logout"
 }
