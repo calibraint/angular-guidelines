@@ -10,11 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: '@app/layouts/login-layout/login-layout.module#LoginLayoutModule',
+    loadChildren: () => import('@app/layouts/login-layout/login-layout.module').then(m => m.LoginLayoutModule),
   },
   {
     path: 'home',
-    loadChildren: '@app/layouts/home-layout/home-layout.module#HomeLayoutModule',
+    loadChildren: () => import('@app/layouts/home-layout/home-layout.module').then(m => m.HomeLayoutModule),
   },
 ];
 
